@@ -3,11 +3,10 @@ import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 
 function App() {
-	
 	return (
 		<>
 			<NavBar />
-			<ItemListContainer greetings="Cake"/>
+			<ItemListContainer greetings="The productos will be here soon..." />
 		</>
 	);
 }

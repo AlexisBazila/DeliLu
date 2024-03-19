@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"product": "strawberry cake",
+		"price": 571341.8,
+		"Description": "pureed strawberries are in the batter, a strawberry reduction is in the frosting, and whole berries are on top",
+		"stock": 36
+	},
+	{
+		"id": 2,
+		"product": "Marquise",
+		"price": 842674.31,
+		"Description": "A rich dessert made with dark chocolate, butter, sugar, cocoa powder, eggs, and cream.",
+		"stock": 84
+	},
+	{
+		"id": 3,
+		"product": "coffee cake",
+		"price": 512007.29,
+		"Description": "Enjoy buttery and soft sour cream coffee cake layered with a thick cinnamon swirl ribbon and plenty of brown sugar crumbs on top",
+		"stock": 17
+	},
+	{
+		"id": 4,
+		"product": "profiterole",
+		"price": 428882.51,
+		"Description": " filled French choux pastry ball with a typically sweet and moist filling of whipped cream, custard, pastry cream, or ice cream. ",
+		"stock": 30
+	}
+]
