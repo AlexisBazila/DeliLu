@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { resolveConfig } from 'vite'
 import data from "../data/products.json";
 
 const ItemDetailContainer = () => {
 
-  productos = [];
+ const [productos, setProductos] = useState([]);
 
   const getProducts = () =>{
     return new Promise((resolve, reject) => {
@@ -12,9 +12,13 @@ const ItemDetailContainer = () => {
     })
   }
   
-  getProducts().then((res) =>{
-    productos = res;
-  })
+  useEffect(()=>{
+    getProducts().then((res) =>{
+        setProductos(res);
+      })
+  }, [])
+
+
 
   return (
     <div>
