@@ -1,6 +1,21 @@
 import React from 'react'
+import { resolveConfig } from 'vite'
+import data from "../data/products.json";
 
 const ItemDetailContainer = () => {
+
+  productos = [];
+
+  const getProducts = () =>{
+    return new Promise((resolve, reject) => {
+        resolve(data);
+    })
+  }
+  
+  getProducts().then((res) =>{
+    productos = res;
+  })
+
   return (
     <div>
         <div class="card" style="width: 18rem;">
