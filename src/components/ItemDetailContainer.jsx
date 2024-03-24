@@ -1,36 +1,44 @@
+
 import React, { useEffect, useState } from 'react'
-import { resolveConfig } from 'vite'
 import data from "../data/products.json";
 
 const ItemDetailContainer = () => {
 
- const [productos, setProductos] = useState([]);
+ const [products, setProducts] = useState([]);
 
   const getProducts = () =>{
     return new Promise((resolve, reject) => {
+      setTimeout(()=>{
         resolve(data);
+      }, 2000)
     })
   }
   
-  useEffect(()=>{
-    getProducts().then((res) =>{
-        setProductos(res);
-      })
+  useEffect(() =>{
+    getProducts().then((data) => { setProducts(data)})
   }, [])
 
 
-
   return (
-    <div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+    <div  style={{ display: 'flex', flexWrap: 'wrap' }}>
+      {products.length > 0 ?
+       products.map((product) => {
+        return(
+          <div class={"card"} style={{width: '18rem'}}>
+            <img src={product.pic} class="card-img-top" alt="..." />
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">{product.product}</h5>
+              <p class="card-text">{"$"+product.price}</p>
+              <p class="card-text">{product.Description}</p>
+              <a href="#" class="btn btn-primary">Add to car</a>
             </div>
-        </div>
+          </div>
+        )
+       })
+       : "Charging products..."}
     </div>
+    
+
   )
 }
 

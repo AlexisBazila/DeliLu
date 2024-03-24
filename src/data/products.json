@@ -4,349 +4,400 @@
 		"product": "chocolate cake",
 		"price": 650000,
 		"Description": "Rich and decadent chocolate cake made with high-quality cocoa powder and topped with chocolate ganache.",
-		"stock": 50
+		"stock": 50,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 2,
 		"product": "cheesecake",
 		"price": 720000,
 		"Description": "Creamy and smooth cheesecake with a graham cracker crust, topped with your choice of fruit compote.",
-		"stock": 45
+		"stock": 45,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 3,
 		"product": "lemon tart",
 		"price": 550000,
 		"Description": "Zesty lemon tart made with freshly squeezed lemon juice and a buttery shortcrust pastry.",
-		"stock": 40
+		"stock": 40,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 4,
 		"product": "apple pie",
 		"price": 600000,
 		"Description": "Classic apple pie made with sweet, crisp apples and a flaky, buttery crust.",
-		"stock": 55
+		"stock": 55,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 5,
 		"product": "red velvet cake",
 		"price": 680000,
 		"Description": "Moist and fluffy red velvet cake with cream cheese frosting, perfect for any occasion.",
-		"stock": 48
+		"stock": 48,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 6,
 		"product": "carrot cake",
 		"price": 620000,
 		"Description": "Delicious carrot cake made with grated carrots, walnuts, and cream cheese frosting.",
-		"stock": 42
+		"stock": 42,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 7,
 		"product": "tiramisu",
 		"price": 700000,
 		"Description": "Classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder.",
-		"stock": 47
+		"stock": 47,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 8,
 		"product": "key lime pie",
 		"price": 590000,
 		"Description": "Tangy and refreshing key lime pie with a graham cracker crust, perfect for summer.",
-		"stock": 38
+		"stock": 38,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 9,
 		"product": "banana bread",
 		"price": 540000,
 		"Description": "Moist and flavorful banana bread made with ripe bananas and a hint of cinnamon.",
-		"stock": 60
+		"stock": 60,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 10,
 		"product": "chocolate chip cookies",
 		"price": 450000,
 		"Description": "Classic chocolate chip cookies with a chewy center and crispy edges, packed with chocolate chips.",
-		"stock": 65
+		"stock": 65,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 11,
 		"product": "blueberry muffins",
 		"price": 480000,
 		"Description": "Soft and fluffy blueberry muffins bursting with fresh blueberries and topped with a cinnamon streusel.",
-		"stock": 58
+		"stock": 58,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 12,
 		"product": "cinnamon rolls",
 		"price": 520000,
 		"Description": "Warm and gooey cinnamon rolls topped with cream cheese frosting, perfect for breakfast or dessert.",
-		"stock": 52
+		"stock": 52,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 13,
 		"product": "lemon bars",
 		"price": 510000,
 		"Description": "Tangy and sweet lemon bars with a buttery shortbread crust, dusted with powdered sugar.",
-		"stock": 43
+		"stock": 43,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 14,
 		"product": "pumpkin pie",
 		"price": 570000,
 		"Description": "Spiced pumpkin pie with a flaky crust, perfect for Thanksgiving or any fall celebration.",
-		"stock": 55
+		"stock": 55,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 15,
 		"product": "strawberry shortcake",
 		"price": 630000,
 		"Description": "Light and fluffy shortcake topped with fresh strawberries and whipped cream.",
-		"stock": 50
+		"stock": 50,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 16,
 		"product": "vanilla cupcakes",
 		"price": 480000,
 		"Description": "Classic vanilla cupcakes with creamy vanilla frosting, perfect for any party.",
-		"stock": 70
+		"stock": 70,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 17,
 		"product": "chocolate mousse",
 		"price": 680000,
 		"Description": "Silky smooth chocolate mousse made with dark chocolate and whipped cream, topped with chocolate shavings.",
-		"stock": 40
+		"stock": 40,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 18,
 		"product": "pecan pie",
 		"price": 620000,
 		"Description": "Sweet and nutty pecan pie with a flaky crust, perfect for Thanksgiving or Christmas.",
-		"stock": 45
+		"stock": 45,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 19,
 		"product": "creme brulee",
 		"price": 690000,
 		"Description": "Classic French dessert with a rich vanilla custard topped with a layer of caramelized sugar.",
-		"stock": 35
+		"stock": 35,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 20,
 		"product": "coconut macaroons",
 		"price": 470000,
 		"Description": "Chewy coconut macaroons dipped in dark chocolate, perfect for coconut lovers.",
-		"stock": 60
+		"stock": 60,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 21,
 		"product": "peanut butter cookies",
 		"price": 460000,
 		"Description": "Soft and chewy peanut butter cookies loaded with chunks of peanuts and chocolate chips.",
-		"stock": 65
+		"stock": 65,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 22,
 		"product": "raspberry sorbet",
 		"price": 550000,
 		"Description": "Refreshing raspberry sorbet made with fresh raspberries and a hint of lemon.",
-		"stock": 50
+		"stock": 50,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 23,
 		"product": "black forest cake",
 		"price": 720000,
 		"Description": "Decadent black forest cake with layers of chocolate cake, whipped cream, and cherries.",
-		"stock": 40
+		"stock": 40,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 24,
 		"product": "lemon meringue pie",
 		"price": 600000,
 		"Description": "Tangy lemon filling topped with fluffy meringue and baked to golden perfection.",
-		"stock": 55
+		"stock": 55,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 25,
 		"product": "tres leches cake",
 		"price": 680000,
 		"Description": "Rich and moist tres leches cake soaked in a sweet milk mixture and topped with whipped cream.",
-		"stock": 48
+		"stock": 48,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 26,
 		"product": "mango sorbet",
 		"price": 540000,
 		"Description": "Smooth and creamy mango sorbet made with ripe mangoes and a splash of lime juice.",
-		"stock": 42
+		"stock": 42,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 27,
 		"product": "apple crisp",
 		"price": 610000,
 		"Description": "Warm and comforting apple crisp with a buttery oat topping, perfect for fall.",
-		"stock": 47
+		"stock": 47,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 28,
 		"product": "cherry pie",
 		"price": 590000,
 		"Description": "Sweet and tart cherry pie with a flaky crust, perfect for summer picnics.",
-		"stock": 38
+		"stock": 38,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 29,
 		"product": "banana cream pie",
 		"price": 630000,
 		"Description": "Creamy banana custard layered with fresh bananas and topped with whipped cream, all in a buttery crust.",
-		"stock": 60
+		"stock": 60,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 30,
 		"product": "snickerdoodles",
 		"price": 450000,
 		"Description": "Soft and chewy snickerdoodle cookies rolled in cinnamon sugar, with a hint of vanilla.",
-		"stock": 65
+		"stock": 65,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
+
 	},
 	{
 		"id": 31,
 		"product": "blueberry pie",
 		"price": 480000,
 		"Description": "Sweet and juicy blueberry pie with a flaky, golden crust.",
-		"stock": 58
+		"stock": 58,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 32,
 		"product": "peach cobbler",
 		"price": 520000,
 		"Description": "Fresh peach cobbler with a sweet biscuit topping, baked until golden brown.",
-		"stock": 52
+		"stock": 52,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 33,
 		"product": "orange chiffon cake",
 		"price": 510000,
 		"Description": "Light and airy orange chiffon cake with a hint of citrus flavor, perfect for summer celebrations.",
-		"stock": 43
+		"stock": 43,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 34,
 		"product": "coconut cream pie",
 		"price": 570000,
 		"Description": "Creamy coconut custard topped with whipped cream and toasted coconut flakes, all in a flaky crust.",
-		"stock": 55
+		"stock": 55,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 35,
 		"product": "peanut butter brownies",
 		"price": 630000,
 		"Description": "Fudgy brownies swirled with creamy peanut butter, topped with chocolate ganache.",
-		"stock": 50
+		"stock": 50,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 36,
 		"product": "key lime cheesecake",
 		"price": 480000,
 		"Description": "Creamy key lime cheesecake with a graham cracker crust, topped with whipped cream and lime zest.",
-		"stock": 70
+		"stock": 70,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 37,
 		"product": "pumpkin bread",
 		"price": 680000,
 		"Description": "Moist and flavorful pumpkin bread with warm spices like cinnamon, nutmeg, and cloves.",
-		"stock": 40
+		"stock": 40,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 38,
 		"product": "white chocolate raspberry cheesecake",
 		"price": 620000,
 		"Description": "Decadent white chocolate cheesecake swirled with tangy raspberry sauce, all on a chocolate cookie crust.",
-		"stock": 45
+		"stock": 45,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 39,
 		"product": "mocha cupcakes",
 		"price": 690000,
 		"Description": "Rich chocolate cupcakes infused with coffee flavor and topped with mocha frosting and chocolate-covered espresso beans.",
-		"stock": 35
+		"stock": 35,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 40,
 		"product": "vanilla bean ice cream",
 		"price": 470000,
 		"Description": "Smooth and creamy vanilla bean ice cream made with real vanilla beans and fresh cream.",
-		"stock": 60
+		"stock": 60,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 41,
 		"product": "strawberry rhubarb pie",
 		"price": 460000,
 		"Description": "Sweet strawberries and tart rhubarb baked together in a flaky, golden crust.",
-		"stock": 65
+		"stock": 65,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 42,
 		"product": "chocolate souffle",
 		"price": 550000,
 		"Description": "Light and airy chocolate souffle with a molten chocolate center, dusted with powdered sugar.",
-		"stock": 50
+		"stock": 50,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 43,
 		"product": "caramel apple pie",
 		"price": 720000,
 		"Description": "Classic apple pie with a twist, featuring caramel sauce and a crumb topping.",
-		"stock": 40
+		"stock": 40,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 44,
 		"product": "lemon pound cake",
 		"price": 600000,
 		"Description": "Buttery and moist lemon pound cake with a tangy lemon glaze.",
-		"stock": 55
+		"stock": 55,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 45,
 		"product": "peach pie",
 		"price": 680000,
 		"Description": "Fresh peach pie with juicy, ripe peaches and a flaky, golden crust.",
-		"stock": 48
+		"stock": 48,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 46,
 		"product": "cannoli",
 		"price": 540000,
 		"Description": "Italian pastry filled with sweet ricotta cheese and chocolate chips, with a crispy shell.",
-		"stock": 42
+		"stock": 42,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	},
 	{
 		"id": 47,
 		"product": "mango sticky rice",
 		"price": 610000,
 		"Description": "Sweet and fragrant mango served over coconut-infused sticky rice, drizzled with coconut milk.",
-		"stock": 47
+		"stock": 47,
+		"pic": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	},
 	{
 		"id": 48,
 		"product": "red berry tart",
 		"price": 590000,
 		"Description": "Buttery tart crust filled with a creamy vanilla custard and topped with fresh red berries.",
-		"stock": 38
+		"stock": 38,
+		"pic": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
 	},
 	{
 		"id": 49,
 		"product": "chocolate lava cake",
 		"price": 630000,
 		"Description": "Warm and gooey chocolate lava cake with a molten chocolate center, served with vanilla ice cream.",
-		"stock": 60
+		"stock": 60,
+		"pic": "http://dummyimage.com/300x300.png/dddddd/000000"
 	},
 	{
 		"id": 50,
 		"product": "caramel pecan pie",
 		"price": 450000,
 		"Description": "Classic pecan pie with a layer of rich caramel sauce, all in a flaky pie crust.",
-		"stock": 65
+		"stock": 65,
+		"pic": "http://dummyimage.com/300x300.png/cc0000/ffffff"
 	}
 ]
