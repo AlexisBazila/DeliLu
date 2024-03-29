@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 
+
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState(null);
 	const { id } = useParams();
@@ -57,9 +58,6 @@ const ItemDetailContainer = () => {
                     <Card.Text><strong>${item.price}</strong></Card.Text>
 				</Card.Body>
 				<Card.Footer className="text-muted">
-                    <Form>
-
-                    </Form>
                     <Button variant="primary">Add to cart</Button>
                     </Card.Footer>
 			</Card>
