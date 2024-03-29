@@ -3,12 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../../style/NavBar.css';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => (
 	<>
 		<Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
 			<Container fluid>
-				<Navbar.Brand href="#">
+				<Navbar.Brand to="/" as={NavLink}>
 					<h1>DeliLu</h1>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />
@@ -18,9 +19,9 @@ export const NavBar = () => (
 						style={{ maxHeight: '100px' }}
 						navbarScroll
 					>
-						<Nav.Link href="#">Tarts</Nav.Link>
-						<Nav.Link href="#">Cakes</Nav.Link>
-						<Nav.Link href="#">Desserts</Nav.Link>
+						<Nav.Link to="/category/Tarts" as={NavLink}>Tarts</Nav.Link>
+						<Nav.Link to="/category/Cakes" as={NavLink}>Cakes</Nav.Link>
+						<Nav.Link to="/category/Desserts" as={NavLink}>Desserts</Nav.Link>
 					</Nav>
 					<CartWidget />
 				</Navbar.Collapse>

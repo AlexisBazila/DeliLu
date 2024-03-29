@@ -1,10 +1,13 @@
 
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import data from "../data/products.json";
 
 export const ItemListContainer = (props) => {
 	const [products, setProducts] = useState([]);
+
+	const {id} = useParams();
 
   useEffect(() =>{
     const getProducts = () =>{
@@ -15,8 +18,15 @@ export const ItemListContainer = (props) => {
       })
     }
 
-    getProducts().then((data) => { setProducts(data)})
-  }, [])
+    getProducts().then((data) => { 
+		if(id){
+			const filteredData = data.filter((d) => d.category === id);
+			setProducts(filteredData)
+		} else{
+			setProducts(data)
+		}
+		})
+  }, [id])
 
 	return (
 		<ItemList products={products} />

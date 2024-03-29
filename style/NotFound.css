@@ -1,0 +1,14 @@
+img{
+    max-width: 70vh;
+}
+
+.notFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 40px;
+    color: rgb(184, 66, 66);
+}
