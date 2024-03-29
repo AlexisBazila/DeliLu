@@ -2,7 +2,6 @@ import { CartWidget } from './CartWidget';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import '../../style/NavBar.css';
 import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => (
@@ -19,9 +18,15 @@ export const NavBar = () => (
 						style={{ maxHeight: '100px' }}
 						navbarScroll
 					>
-						<Nav.Link to="/category/Tarts" as={NavLink}>Tarts</Nav.Link>
-						<Nav.Link to="/category/Cakes" as={NavLink}>Cakes</Nav.Link>
-						<Nav.Link to="/category/Desserts" as={NavLink}>Desserts</Nav.Link>
+						<Nav.Link to="/category/Tarts" as={NavLink}>
+							Tarts
+						</Nav.Link>
+						<Nav.Link to="/category/Cakes" as={NavLink}>
+							Cakes
+						</Nav.Link>
+						<Nav.Link to="/category/Desserts" as={NavLink}>
+							Desserts
+						</Nav.Link>
 					</Nav>
 					<CartWidget />
 				</Navbar.Collapse>

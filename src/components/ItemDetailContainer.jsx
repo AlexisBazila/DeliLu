@@ -43,28 +43,31 @@ const ItemDetailContainer = () => {
 
 	return (
 		<div>
-			<Card className="text-center" style={{margin:'5% 20% 5% 20%'}}>
-				<Card.Header >
-                    <Card.Img  src={item.pictureUrl} style={{maxHeight:'400px', maxWidth:'400px'}}/>
-                </Card.Header>
-                <Card.Header>
-                    <Card.Title>{item.title}</Card.Title>
-                </Card.Header>
+			<Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
+				<Card.Header>
+					<Card.Img
+						src={item.pictureUrl}
+						style={{ maxHeight: '400px', maxWidth: '400px' }}
+					/>
+				</Card.Header>
+				<Card.Header>
+					<Card.Title>{item.title}</Card.Title>
+				</Card.Header>
 				<Card.Body>
-
-                <Card.Text>{item.Description}</Card.Text>
-                    <Card.Text><strong>Category:</strong> {item.category}</Card.Text>
-                    <Card.Text><strong>${item.price}</strong></Card.Text>
+					<Card.Text>{item.Description}</Card.Text>
+					<Card.Text>
+						<strong>Category:</strong> {item.category}
+					</Card.Text>
+					<Card.Text>
+						<strong>${item.price}</strong>
+					</Card.Text>
 				</Card.Body>
 				<Card.Footer className="text-muted">
-                    <Form>
-
-                    </Form>
-                    <Button variant="primary">Add to cart</Button>
-                    </Card.Footer>
+					<Form></Form>
+					<Button variant="primary">Add to cart</Button>
+				</Card.Footer>
 			</Card>
-            </div>
-
+		</div>
 	);
 };
 
