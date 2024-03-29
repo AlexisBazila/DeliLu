@@ -1,11 +1,7 @@
 import { CartWidget } from './CartWidget';
-
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../../style/NavBar.css';
 
 export const NavBar = () => (
@@ -13,7 +9,7 @@ export const NavBar = () => (
 		<Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
 			<Container fluid>
 				<Navbar.Brand href="#">
-					<img src="../../resources/img/dllight.png" alt="" />
+					<h1>DeliLu</h1>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />
 				<Navbar.Collapse id="navbarScroll">
@@ -22,9 +18,9 @@ export const NavBar = () => (
 						style={{ maxHeight: '100px' }}
 						navbarScroll
 					>
-						<Nav.Link href="#">Cackes</Nav.Link>
-						<Nav.Link href="#">Cheese Cake</Nav.Link>
-						<Nav.Link href="#">Salty</Nav.Link>
+						<Nav.Link href="#">Tarts</Nav.Link>
+						<Nav.Link href="#">Cakes</Nav.Link>
+						<Nav.Link href="#">Desserts</Nav.Link>
 					</Nav>
 					<CartWidget />
 				</Navbar.Collapse>

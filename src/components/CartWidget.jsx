@@ -1,15 +1,11 @@
-import '../../style/CartWidget.css';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
 export const CartWidget = () => {
 	return (
-		<>
-			<button type="button" class="btn btn-primary position-relative">
-				<i class="bx bx-cart"></i>
-				<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-					5
-					<span class="visually-hidden">unread messages</span>
-				</span>
-			</button>
-		</>
+	<Button variant="light">
+      <i class="bx bx-cart" style={{ fontSize: '30px',}}></i> <Badge bg="dark" pill>5</Badge>
+      <span className="visually-hidden">unread messages</span>
+    </Button>
 	);
 };

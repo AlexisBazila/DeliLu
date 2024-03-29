@@ -1,19 +1,19 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Item = ({product}) => {
   return (
-    <div>
-      <div class={"card"} style={{width: '18rem', margin: '1rem'}}>
-            <img src={product.pic} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{product.product}</h5>
-              <p class="card-text">{product.category}</p>
-              <p class="card-text">{"$"+product.price}</p>
-              <p class="card-text">{product.Description}</p>
-              <a href="#" class="btn btn-primary">Add to car</a>
-            </div>
-          </div>
-    </div>
+    <Card style={{ width: '18rem', margin: '1rem' }}>
+      <Card.Img variant="top" src={product.pic} />
+      <Card.Body>
+        <Card.Title>{product.product}</Card.Title>
+        <Card.Text>{product.Description}</Card.Text>
+        <Card.Text><strong>Category:</strong> {product.category}</Card.Text>
+        <Card.Text>{"$"+product.price}</Card.Text>
+        <Button variant="dark">+info</Button>
+      </Card.Body>
+    </Card>
   )
 }
 

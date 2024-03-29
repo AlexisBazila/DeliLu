@@ -17,11 +17,8 @@ export const ItemListContainer = (props) => {
 
     getProducts().then((data) => { setProducts(data)})
   }, [])
-  
+
 	return (
-		<div style={{ display: 'flex', alignItems: 'center'}}>
-			{/* <h1>{props.greetings}</h1> */}
-			<ItemList products={products} />
-		</div>
+		<ItemList products={products} />
 	);
 };
