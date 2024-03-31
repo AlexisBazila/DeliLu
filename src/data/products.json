@@ -88,5 +88,14 @@
 		"Description": "Classic pecan pie with a layer of rich caramel sauce, all in a flaky pie crust.",
 		"stock": 65,
 		"pictureUrl": "http://dummyimage.com/300x300.png/ff4444/ffffff"
+	  },
+	  {
+		"id": 11,
+		"category": "Tarts",
+		"title": "caramel pecan pie",
+		"price": 450000,
+		"Description": "Classic pecan pie with a layer of rich caramel sauce, all in a flaky pie crust.",
+		"stock": 65,
+		"pictureUrl": "http://dummyimage.com/300x300.png/ff4444/ffffff"
 	  }
 ]
