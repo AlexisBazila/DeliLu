@@ -5,6 +5,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import ItemCount from './ItemCount';
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState(null);
@@ -63,7 +64,7 @@ const ItemDetailContainer = () => {
 					</Card.Text>
 				</Card.Body>
 				<Card.Footer className="text-muted">
-					<Form></Form>
+					<ItemCount />
 					<Button variant="primary">Add to cart</Button>
 				</Card.Footer>
 			</Card>
