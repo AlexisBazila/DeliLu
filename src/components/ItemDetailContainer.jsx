@@ -1,7 +1,10 @@
+// Importaciones react
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/products.json';
+// Importaciones Boostrap
 import Spinner from 'react-bootstrap/Spinner';
+// Importaciones datos y componentes
+import data from '../data/products.json';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {

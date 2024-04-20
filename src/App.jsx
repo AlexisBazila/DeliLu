@@ -4,12 +4,13 @@ import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { NotFound } from './components/NotFound';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { CartProvider } from './context/CartContext';
 
 function App() {
 	return (
+		<CartProvider>
 		<BrowserRouter>
 			<NavBar />
-			
 			<Routes>
 				<Route path="*" element={<NotFound />}/>
 				<Route path="/" element={<ItemListContainer />}/>
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/item/:id" element={<ItemDetailContainer />}/>
 			</Routes>
 		</BrowserRouter>
+		</CartProvider>
 	);
 }
 

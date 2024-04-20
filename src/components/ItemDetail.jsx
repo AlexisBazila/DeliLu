@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
+// Importaciones de react
+import React, { useContext } from 'react';
+// Importaciones de Boostrap
 import Card from 'react-bootstrap/Card';
+// Imporetaciones de componentes
 import ItemCount from './ItemCount';
+import { CartContext } from '../context/CartContext';
 
+const ItemDetail = ({ item }) => {
 
-const ItemDetail = ({item}) => {
+	const {addItem} = useContext(CartContext);
 
-    const [quantity, setQuantity] = useState(1);
-
-const handleSubtract = () =>{
-  quantity > 1 && setQuantity(quantity - 1)
-}
-
-const handleAdd = () =>{
-  quantity < item.stock && setQuantity(quantity + 1)
-}
-
-const handleAddCart = () =>{
-    console.log({...item, quantity})
-}
-  return (
-    <div>
-      <Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
+	const add = (quantity) => addItem(item, quantity);
+	// const add = (quantity) => alert(quantity);
+	return (
+		<div>
+			<Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
 				<Card.Header>
 					<Card.Img
 						src={item.pictureUrl}
@@ -43,15 +37,11 @@ const handleAddCart = () =>{
 					</Card.Text>
 				</Card.Body>
 				<Card.Footer className="text-muted">
-					<ItemCount 
-                    quantity={quantity} 
-                    handleAdd={handleAdd} 
-                    handleSubtract={handleSubtract}
-                    handleAddCart={handleAddCart}/>
+					<ItemCount onAdd={add} stock={item.stock} />
 				</Card.Footer>
-			</Card>  
-    </div>
-  )
-}
+			</Card>
+		</div>
+	);
+};
 
-export default ItemDetail
+export default ItemDetail;
