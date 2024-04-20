@@ -60,12 +60,15 @@ const ItemDetailContainer = () => {
 						<strong>Category:</strong> {item.category}
 					</Card.Text>
 					<Card.Text>
+						<strong>Stock:</strong> {item.stock}
+					</Card.Text>
+					<Card.Text>
 						<strong>${item.price}</strong>
 					</Card.Text>
 				</Card.Body>
 				<Card.Footer className="text-muted">
-					<ItemCount />
-					<Button variant="primary">Add to cart</Button>
+					<ItemCount item={item}/>
+					
 				</Card.Footer>
 			</Card>
 		</div>
