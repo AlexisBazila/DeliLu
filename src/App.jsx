@@ -6,8 +6,21 @@ import { NotFound } from './components/NotFound';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { useEffect } from 'react';
 
 function App() {
+
+	useEffect(() => {
+		const db = getFirestore();
+
+		const refDoc = doc(db, "items", "U64p3Yjf3D1f4rneu1xQ");
+
+		getDoc(refDoc).then((snapshot) => {
+			console.log({id: snapshot.id, ...snapshot.data()});
+		})
+	}, [])
+
 	return (
 		<CartProvider>
 		<BrowserRouter>
