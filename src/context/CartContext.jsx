@@ -12,19 +12,24 @@ export const CartProvider = ({children}) =>{
         const newCart = [...cart];
         const inCart = newCart.find((product) => product.id === addedItem.id);
         if(inCart){
-            console.log("estaba y se suma")
             inCart.quantity += quantity;
             setCart(newCart);
         }else{
-            console.log("no taba y se agrega")
             setCart([...cart, addedItem])
         }
+        alert("the product was added to the cart")
     }
+    // Eliminar para entregar
     console.log(cart)
+    
+    const removeItem = (i) => {
+        const filterCart = cart.filter((item) => item.id !== id);
+        setCart(filterCart)
+    };
 
 
     return(
-        <CartContext.Provider value={{addItem, clear, cart}}>
+        <CartContext.Provider value={{addItem, removeItem, clear, cart}}>
             {children}
         </CartContext.Provider>
     )

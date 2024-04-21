@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
 	const {addItem} = useContext(CartContext);
 
 	const add = (quantity) => addItem(item, quantity);
-	// const add = (quantity) => alert(quantity);
+
 	return (
 		<div>
 			<Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
