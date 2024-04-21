@@ -1,10 +1,11 @@
+// Importaciones react
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../data/products.json';
+// Importaciones Boostrap
 import Spinner from 'react-bootstrap/Spinner';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
+// Importaciones datos y componentes
+import data from '../data/products.json';
+import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState(null);
@@ -43,30 +44,7 @@ const ItemDetailContainer = () => {
 
 	return (
 		<div>
-			<Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
-				<Card.Header>
-					<Card.Img
-						src={item.pictureUrl}
-						style={{ maxHeight: '400px', maxWidth: '400px' }}
-					/>
-				</Card.Header>
-				<Card.Header>
-					<Card.Title>{item.title}</Card.Title>
-				</Card.Header>
-				<Card.Body>
-					<Card.Text>{item.Description}</Card.Text>
-					<Card.Text>
-						<strong>Category:</strong> {item.category}
-					</Card.Text>
-					<Card.Text>
-						<strong>${item.price}</strong>
-					</Card.Text>
-				</Card.Body>
-				<Card.Footer className="text-muted">
-					<Form></Form>
-					<Button variant="primary">Add to cart</Button>
-				</Card.Footer>
-			</Card>
+			<ItemDetail item={item}/>
 		</div>
 	);
 };

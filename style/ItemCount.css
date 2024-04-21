@@ -1,0 +1,11 @@
+.item-count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.item-count p{
+    margin: 10px;
+    font-size: xx-large;
+}
