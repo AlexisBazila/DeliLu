@@ -11,12 +11,16 @@ import { CartContext } from '../context/CartContext';
 export const CartWidget = () => {
 	const {cart} = useContext(CartContext);
 
+	const itemsInCart = cart.reduce((accumulator, current) => accumulator + current.quantity,0);
+
+	if(!itemsInCart) return null; 
+
 	return (
 		<Nav.Link to="/cart" as={NavLink}>
 			<Button variant="light">
 				<i className="bx bx-cart" style={{ fontSize: '30px' }}></i>{' '}
 				<Badge bg="dark" pill>
-					{cart.length}
+					{itemsInCart}
 				</Badge>
 				<span class="visually-hidden">unread messages</span>
 			</Button>

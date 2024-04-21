@@ -14,7 +14,7 @@ const Cart = () => {
     };
     
     const [buyer, setBuyer] = useState(initalValues);
-    const {cart, clear} = useContext(CartContext);
+    const {cart, clear, removeItem} = useContext(CartContext);
 
     const handleChange = (ev) => {
         const {name, value} = ev.target;
@@ -45,7 +45,9 @@ const Cart = () => {
         <tr>
           <th>#</th>
           <th>Product Name Name</th>
+          <th>Price</th>
           <th>Quantity</th>
+          <th>Delete product</th>
         </tr>
       </thead>
       <tbody>
@@ -53,7 +55,9 @@ const Cart = () => {
                 <tr key={item.id}>
                     <td>{item.id}</td>
                     <td>{item.title}</td>
+                    <td>${item.price}</td>
                     <td>{item.quantity}</td>
+                    <td><Button onClick={() => removeItem(item.id)}>X</Button></td>
                 </tr> )}
       </tbody>
     </Table>
