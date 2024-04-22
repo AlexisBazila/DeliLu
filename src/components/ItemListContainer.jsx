@@ -27,7 +27,7 @@ export const ItemListContainer = (props) => {
 		else {
 			refCollection = query(
 				collection(db, 'items'),
-				where('category', '==', id)
+				where('categoryId', '==', id)
 			);
 		}
 

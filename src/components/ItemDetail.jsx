@@ -7,8 +7,7 @@ import ItemCount from './ItemCount';
 import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({ item }) => {
-
-	const {addItem} = useContext(CartContext);
+	const { addItem } = useContext(CartContext);
 
 	const add = (quantity) => addItem(item, quantity);
 
@@ -17,7 +16,7 @@ const ItemDetail = ({ item }) => {
 			<Card className="text-center" style={{ margin: '5% 20% 5% 20%' }}>
 				<Card.Header>
 					<Card.Img
-						src={item.pictureUrl}
+						src={item.image}
 						style={{ maxHeight: '400px', maxWidth: '400px' }}
 					/>
 				</Card.Header>
@@ -25,9 +24,9 @@ const ItemDetail = ({ item }) => {
 					<Card.Title>{item.title}</Card.Title>
 				</Card.Header>
 				<Card.Body>
-					<Card.Text>{item.Description}</Card.Text>
+					<Card.Text>{item.description}</Card.Text>
 					<Card.Text>
-						<strong>Category:</strong> {item.category}
+						<strong>Category:</strong> {item.categoryID}
 					</Card.Text>
 					<Card.Text>
 						<strong>Stock:</strong> {item.stock}
