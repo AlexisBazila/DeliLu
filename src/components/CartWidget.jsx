@@ -1,5 +1,5 @@
 // Importaciones React
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import React, { useContext } from 'react';
 // Importaciones Boostrap
 import Badge from 'react-bootstrap/Badge';
@@ -9,11 +9,14 @@ import Nav from 'react-bootstrap/Nav';
 import { CartContext } from '../context/CartContext';
 
 export const CartWidget = () => {
-	const {cart} = useContext(CartContext);
+	const { items } = useContext(CartContext);
 
-	const itemsInCart = cart.reduce((accumulator, current) => accumulator + current.quantity,0);
+	const itemsInCart = items.reduce(
+		(accumulator, current) => accumulator + current.quantity,
+		0
+	);
 
-	if(!itemsInCart) return null; 
+	if (!itemsInCart) return null;
 
 	return (
 		<Nav.Link to="/cart" as={NavLink}>
