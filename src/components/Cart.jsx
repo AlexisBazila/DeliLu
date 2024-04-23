@@ -5,6 +5,7 @@ import { React, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
 	const initalValues = {
@@ -41,7 +42,15 @@ const Cart = () => {
 		addDoc(orderCollection, order).then(({ id }) => {
 			if (id) {
 				clear();
-				alert('The order ID: ' + id + ' has been complete!');
+				Swal.fire({
+					position: 'midle',
+					icon: 'success',
+
+					title: 'The order ID: ' + id + ' has been complete!',
+					showConfirmButton: false,
+					timer: 2500,
+				});
+				// alert('The order ID: ' + id + ' has been complete!');
 			}
 		});
 	};
