@@ -1,16 +1,9 @@
 import { createContext, useState } from 'react';
-<<<<<<< HEAD
-import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-	
-=======
-export const CartContext = createContext();
-
-export const CartProvider = ({ children }) => {
->>>>>>> af86844bda2085c8a02f39fdee428c8712457824
 	const [items, setItems] = useState([]);
 
 	const clear = () => setItems([]);
@@ -25,7 +18,14 @@ export const CartProvider = ({ children }) => {
 		} else {
 			setItems([...items, addedItem]);
 		}
-		alert('the product was added to the cart');
+
+		Swal.fire({
+			position: 'midle',
+			icon: 'success',
+			title: 'Product added to cart!',
+			showConfirmButton: false,
+			timer: 900,
+		});
 	};
 
 	const removeItem = (i) => {

@@ -30,7 +30,7 @@ i {
 
 .cart {
 	display: flex;
-
+	justify-content: center;
 	width: 70%;
 	margin: 2% 10% 2% 10%;
 }
@@ -43,7 +43,11 @@ i {
 
 .buton {
 	display: flex;
-	text-align: end;
+	text-align: center;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.icart {
+	color: white;
 }

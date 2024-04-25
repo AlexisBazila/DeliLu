@@ -27,11 +27,11 @@ const handleAddCart = () =>{
   return (
     <div>
       <div className="item-count">
-        <Button onClick={handleSubtract}>-</Button>
+        <Button variant="dark" onClick={handleSubtract}>-</Button>
         <p>{quantity}</p>
-        <Button  onClick={handleAdd}>+</Button>
+        <Button  variant="dark" onClick={handleAdd}>+</Button>
       </div>
-      <Button variant="primary" onClick={handleAddCart}>Add to cart</Button>
+      <Button  variant="dark"onClick={handleAddCart}>Add to cart</Button>
     </div>
   )
 }

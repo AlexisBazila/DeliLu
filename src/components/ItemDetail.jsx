@@ -26,7 +26,7 @@ const ItemDetail = ({ item }) => {
 				<Card.Body>
 					<Card.Text>{item.description}</Card.Text>
 					<Card.Text>
-						<strong>Category:</strong> {item.categoryID}
+						<strong>Category:</strong> {item.categoryId}
 					</Card.Text>
 					<Card.Text>
 						<strong>Stock:</strong> {item.stock}

@@ -16,7 +16,6 @@ import {
 // Importaciones sweetalert
 import Swal from 'sweetalert2';
 // Importaciones de componentes
-import CheckoutForm from './CheckoutForm';
 import '../../style/Checkout.css';
 
 const Cart = () => {
@@ -54,12 +53,9 @@ const Cart = () => {
 			if (id) {
 				clear();
 				Swal.fire({
-					position: 'midle',
+					title: 'The order has been complete!',
+					text: 'Order ID: ' + id + '',
 					icon: 'success',
-
-					title: 'The order ID: ' + id + ' has been complete!',
-					showConfirmButton: false,
-					timer: 2500,
 				});
 			}
 		});
@@ -69,7 +65,10 @@ const Cart = () => {
 		<div className="cart">
 			<div className="order">
 				<Badge bg="dark">
-					<h1>MY ORDER</h1>
+					<h1>
+						<i className="bx bxs-cart-alt icart"></i> MY CART{' '}
+						<i className="bx bx-arrow-from-left icart"></i>
+					</h1>
 				</Badge>
 				<div>
 					<Table striped bordered hover variant="dark">
@@ -103,11 +102,11 @@ const Cart = () => {
 							))}
 						</tbody>
 					</Table>
-					<div className="buton">
-						<Button variant="dark" onClick={clear}>
-							Clear cart
-						</Button>
-						<Badge bg="dark">
+					<div>
+						<Badge bg="dark" className="buton">
+							<Button variant="light" onClick={clear}>
+								Clear cart <i class="bx bx-message-square-x"></i>
+							</Button>
 							<h3>Total: ${total}</h3>
 						</Badge>
 					</div>
