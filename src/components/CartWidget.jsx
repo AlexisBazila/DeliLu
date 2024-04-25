@@ -17,7 +17,6 @@ export const CartWidget = () => {
 	);
 
 	if (!itemsInCart) return null;
-
 	return (
 		<Nav.Link to="/cart" as={NavLink}>
 			<Button variant="light">

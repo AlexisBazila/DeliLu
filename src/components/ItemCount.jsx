@@ -23,7 +23,6 @@ const handleAddCart = () =>{
 }
 
 
-
   return (
     <div>
       <div className="item-count">
