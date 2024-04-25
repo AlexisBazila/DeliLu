@@ -1,10 +1,16 @@
 import { createContext, useState } from 'react';
+<<<<<<< HEAD
 import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 	
+=======
+export const CartContext = createContext();
+
+export const CartProvider = ({ children }) => {
+>>>>>>> af86844bda2085c8a02f39fdee428c8712457824
 	const [items, setItems] = useState([]);
 
 	const clear = () => setItems([]);
