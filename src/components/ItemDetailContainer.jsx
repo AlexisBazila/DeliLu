@@ -1,40 +1,39 @@
-// Importaciones react
+// Importaciones React
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // Importaciones Firestore
 import { getFirestore, getDoc, doc } from 'firebase/firestore';
 // Importaciones Boostrap
 import Spinner from 'react-bootstrap/Spinner';
-// Importaciones datos y componentes
-import data from '../data/products.json';
+// Importaciones componentes
 import ItemDetail from './ItemDetail';
+import { NotFound } from './NotFound';
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState(null);
+	const [loading, setLoading] = useState(true);
 	const { id } = useParams();
 
 	useEffect(() => {
 		const db = getFirestore();
-
 		const refDoc = doc(db, 'items', id);
 
-		getDoc(refDoc).then((snapshot) => {
-			setItem({ id: snapshot.id, ...snapshot.data() });
-		});
-		// const getProducts = () => {
-		// 	return new Promise((resolve, reject) => {
-		// 		setTimeout(() => {
-		// 			resolve(data);
-		// 		}, 2000);
-		// 	});
-		// };
-		// getProducts().then((data) => {
-		// 	const filteredData = data.find((i) => i.id === Number(id));
-		// 	setItem(filteredData);
-		// });
+		getDoc(refDoc)
+			.then((snapshot) => {
+				if (snapshot.exists()) {
+					setItem({ id: snapshot.id, ...snapshot.data() });
+				} else {
+					setItem(null);
+				}
+				setLoading(false);
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+				setLoading(false);
+			});
 	}, [id]);
 
-	if (!item)
+	if (loading) {
 		return (
 			<div
 				style={{
@@ -49,12 +48,15 @@ const ItemDetailContainer = () => {
 				</Spinner>
 			</div>
 		);
-
-	return (
-		<div>
-			<ItemDetail item={item} />
-		</div>
-	);
+	} else if (!item) {
+		return <NotFound />;
+	} else {
+		return (
+			<div>
+				<ItemDetail item={item} />
+			</div>
+		);
+	}
 };
 
 export default ItemDetailContainer;
