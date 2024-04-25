@@ -1,24 +1,7 @@
 import { createContext, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-	const notify = () => {
-		toast.success('🛒The product was added to the cart!', {
-			position: 'bottom-right',
-			autoClose: 5000,
-			hideProgressBar: true,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-			theme: 'dark',
-			transition: Bounce,
-		});
-	};
-
 	const [items, setItems] = useState([]);
 
 	const clear = () => setItems([]);
@@ -33,8 +16,7 @@ export const CartProvider = ({ children }) => {
 		} else {
 			setItems([...items, addedItem]);
 		}
-		notify();
-		// alert('the product was added to the cart');
+		alert('the product was added to the cart');
 	};
 
 	const removeItem = (i) => {

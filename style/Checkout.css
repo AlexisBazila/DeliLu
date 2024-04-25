@@ -1,0 +1,49 @@
+.order {
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
+	border: 3px solid #2b3035;
+	border-radius: 10px;
+	padding: 2%;
+}
+.tdimage {
+	max-width: 150px;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+th {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}
+
+i {
+	font-size: 30px;
+	color: #2b3035;
+}
+
+.cart {
+	display: flex;
+
+	width: 70%;
+	margin: 2% 10% 2% 10%;
+}
+
+.form {
+	border: 3px solid #2b3035;
+	border-radius: 10px;
+	padding: 2%;
+}
+
+.buton {
+	display: flex;
+	text-align: end;
+	align-items: center;
+	justify-content: space-between;
+}
