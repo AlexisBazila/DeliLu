@@ -10,7 +10,8 @@ export const NotFound = () => {
 			/>
 			<div className="description">
 				<h2>404</h2>
-				<p>Oops, it seems something went weong</p>
+				<h3>Ho no! Something has gone wrong</h3>
+				<p>The page you want to access does not exist</p>
 			</div>
 		</div>
 	);

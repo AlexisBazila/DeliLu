@@ -11,7 +11,6 @@ import {
 } from 'firebase/firestore';
 // Importaion de componentes
 import ItemList from './ItemList';
-import data from '../data/products.json';
 
 export const ItemListContainer = (props) => {
 	const [products, setProducts] = useState([]);
@@ -39,25 +38,6 @@ export const ItemListContainer = (props) => {
 			);
 		});
 	}, [id]);
-
-	// useEffect(() => {
-	// 	const getProducts = () => {
-	// 		return new Promise((resolve, reject) => {
-	// 			setTimeout(() => {
-	// 				resolve(data);
-	// 			}, 2000);
-	// 		});
-	// 	};
-
-	// 	getProducts().then((data) => {
-	// 		if (id) {
-	// 			const filteredData = data.filter((d) => d.category === id);
-	// 			setProducts(filteredData);
-	// 		} else {
-	// 			setProducts(data);
-	// 		}
-	// 	});
-	// }, [id]);
 
 	return <ItemList products={products} />;
 };
