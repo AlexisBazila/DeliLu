@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
 // Importacion boostrap
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
@@ -68,8 +69,14 @@ const Cart = () => {
 				<div className="order">
 					<Badge bg="dark">
 						<h1>
-							<i className="bx bxs-cart-alt icart"></i>
-							<h2>Your cart is empty</h2>
+							<h2>
+								<i className="bx bxs-cart-alt icart"></i> Your cart is empty
+							</h2>
+							<Link to="/">
+								<Button variant="light">
+									Go to shop <i class="bx bx-run"></i>
+								</Button>
+							</Link>
 						</h1>
 					</Badge>
 				</div>
