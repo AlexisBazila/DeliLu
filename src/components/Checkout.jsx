@@ -62,6 +62,21 @@ const Cart = () => {
 		});
 	};
 
+	if (items.length === 0) {
+		return (
+			<div className="cart">
+				<div className="order">
+					<Badge bg="dark">
+						<h1>
+							<i className="bx bxs-cart-alt icart"></i>
+							<h2>Your cart is empty</h2>
+						</h1>
+					</Badge>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<div className="cart">
 			<div className="order">
