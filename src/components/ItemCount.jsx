@@ -22,7 +22,6 @@ const handleAddCart = () =>{
     onAdd(quantity);
 }
 
-
   return (
     <div>
       <div className="item-count">
