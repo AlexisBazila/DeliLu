@@ -24,7 +24,7 @@ export const CartWidget = () => {
 				<Badge bg="dark" pill>
 					{itemsInCart}
 				</Badge>
-				<span class="visually-hidden">unread messages</span>
+				<span className="visually-hidden">unread messages</span>
 			</Button>
 		</Nav.Link>
 	);

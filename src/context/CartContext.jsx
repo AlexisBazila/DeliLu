@@ -20,7 +20,6 @@ export const CartProvider = ({ children }) => {
 		}
 
 		Swal.fire({
-			position: 'midle',
 			icon: 'success',
 			title: 'Product added to cart!',
 			showConfirmButton: false,
