@@ -66,8 +66,7 @@ const Cart = () => {
 			<div className="order">
 				<Badge bg="dark">
 					<h1>
-						<i className="bx bxs-cart-alt icart"></i> MY CART{' '}
-						<i className="bx bx-arrow-from-left icart"></i>
+						<i className="bx bxs-cart-alt icart"></i>
 					</h1>
 				</Badge>
 				<div>
@@ -95,7 +94,7 @@ const Cart = () => {
 									<td>${item.price * item.quantity}</td>
 									<td>
 										<Button variant="light" onClick={() => removeItem(item.id)}>
-											<i class="bx bxs-message-square-minus"></i>
+											<i className="bx bxs-message-square-minus"></i>
 										</Button>
 									</td>
 								</tr>
@@ -105,9 +104,9 @@ const Cart = () => {
 					<div>
 						<Badge bg="dark" className="buton">
 							<Button variant="light" onClick={clear}>
-								Clear cart <i class="bx bx-message-square-x"></i>
+								Clear cart <i className="bx bx-message-square-x"></i>
 							</Button>
-							<h3>Total: ${total}</h3>
+							<h2>Total: ${total}</h2>
 						</Badge>
 					</div>
 				</div>
@@ -115,10 +114,12 @@ const Cart = () => {
 
 			<div className="form">
 				<Badge bg="dark">
-					<h2>CONTACT</h2>
+					<h2>
+						<i className="bx bx-package  icart"></i> checkout
+					</h2>
 				</Badge>
 
-				<Form>
+				<Form className="checkoutForm">
 					<Form.Group className="mb-3" controlId="formBasicEmail">
 						<Form.Label>Name</Form.Label>
 						<Form.Control
@@ -150,9 +151,12 @@ const Cart = () => {
 						/>
 					</Form.Group>
 				</Form>
-				<Button variant="dark" onClick={handleOrder}>
-					Buy
-				</Button>
+				<Badge className="buton" bg="dark">
+					<h3>Send Order</h3>
+					<Button variant="light" onClick={handleOrder}>
+						<i class="bx bx-arrow-from-left"></i>
+					</Button>
+				</Badge>
 			</div>
 		</div>
 	);

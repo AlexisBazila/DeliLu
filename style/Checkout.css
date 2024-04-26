@@ -30,15 +30,20 @@ i {
 
 .cart {
 	display: flex;
+	align-items: center;
 	justify-content: center;
 	width: 70%;
 	margin: 2% 10% 2% 10%;
 }
 
 .form {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 	border: 3px solid #2b3035;
 	border-radius: 10px;
 	padding: 2%;
+	max-height: 500px;
 }
 
 .buton {
@@ -50,4 +55,21 @@ i {
 
 .icart {
 	color: white;
+}
+
+.checkoutForm {
+	border: 3px solid #2b3035;
+	border-radius: 10px;
+	padding: 10%;
+	margin: 2%;
+}
+
+h2 {
+	margin: 5px;
+	color: #b84242;
+}
+
+h3 {
+	padding: 5px;
+	margin: 5px;
 }
