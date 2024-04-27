@@ -30,7 +30,6 @@ i {
 
 .cart {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	width: 70%;
 	margin: 2% 10% 2% 10%;
@@ -43,7 +42,15 @@ i {
 	border: 3px solid #2b3035;
 	border-radius: 10px;
 	padding: 2%;
-	max-height: 500px;
+	max-height: 600px;
+}
+
+.headfeet {
+	width: 300px;
+}
+
+Form {
+	width: 300px;
 }
 
 .buton {
@@ -51,6 +58,7 @@ i {
 	text-align: center;
 	align-items: center;
 	justify-content: space-between;
+	min-width: 300px;
 }
 
 .icart {

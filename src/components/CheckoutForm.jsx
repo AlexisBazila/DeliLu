@@ -1,21 +1,20 @@
 import React from 'react';
 // Importacion boostrap
 import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
 import Badge from 'react-bootstrap/Badge';
 import Form from 'react-bootstrap/Form';
 
 const CheckoutForm = ({ buyer, handleChange, handleOrder }) => {
 	return (
 		<div className="form">
-			<Badge bg="dark">
+			<Badge bg="dark" className="headfeet">
 				<h2>
 					<i className="bx bx-package  icart"></i> checkout
 				</h2>
 			</Badge>
 
 			<Form className="checkoutForm">
-				<Form.Group className="mb-3" controlId="formBasicEmail">
+				<Form.Group className="mb-3">
 					<Form.Label>Name</Form.Label>
 					<Form.Control
 						type="text"
@@ -36,6 +35,16 @@ const CheckoutForm = ({ buyer, handleChange, handleOrder }) => {
 					/>
 				</Form.Group>
 				<Form.Group className="mb-3" controlId="formBasicEmail">
+					<Form.Label>ConfirmEmail</Form.Label>
+					<Form.Control
+						type="email"
+						placeholder="Confirm your email"
+						name="emailConfirm"
+						onChange={handleChange}
+						value={buyer.emailConfirm}
+					/>
+				</Form.Group>
+				<Form.Group className="mb-3">
 					<Form.Label>Phone</Form.Label>
 					<Form.Control
 						type="number"

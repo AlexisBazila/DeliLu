@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // Importacion boostrap
 import Button from 'react-bootstrap/Button';
@@ -24,6 +24,7 @@ const Cart = () => {
 	const initalValues = {
 		name: '',
 		email: '',
+		emailConfirm: '',
 		phone: '',
 	};
 	const today = Timestamp.fromDate(new Date());
@@ -35,32 +36,69 @@ const Cart = () => {
 
 	const handleChange = (ev) => {
 		const { name, value } = ev.target;
-		setBuyer((prev) => {
-			return {
-				...prev,
-				[name]: value,
-			};
-		});
+		setBuyer((prev) => ({
+			...prev,
+			[name]: value,
+		}));
 	};
 
 	const handleOrder = () => {
-		const order = {
-			buyer,
-			items,
-			total,
-			date: today,
-		};
-
-		addDoc(orderCollection, order).then(({ id }) => {
-			if (id) {
-				clear();
+		// Control de formulario completo
+		if (
+			buyer.name != '' &&
+			buyer.email != '' &&
+			buyer.emailConfirm != '' &&
+			buyer.phone != ''
+		) {
+			// Control de coincidencia de correo electronico
+			if (
+				buyer.email != '' &&
+				buyer.emailConfirm != '' &&
+				buyer.email === buyer.emailConfirm
+			) {
+				const order = {
+					buyer,
+					items,
+					total,
+					date: today,
+				};
+				// Mensaje de carga de la orden
 				Swal.fire({
-					title: 'The order has been complete!',
-					text: 'Order ID: ' + id + '',
-					icon: 'success',
+					title: 'Processing order...',
+					html: 'Please wait while we process your order.',
+					timerProgressBar: true,
+					didOpen: () => {
+						Swal.showLoading();
+					},
+					willClose: () => {
+						clearInterval(timerInterval);
+					},
 				});
+				//Carga del documento a firestore
+				addDoc(orderCollection, order).then(({ id }) => {
+					if (id) {
+						clear();
+						Swal.fire({
+							title: 'The order has been complete!',
+							text: 'Order ID: ' + id + '',
+							icon: 'success',
+						});
+					}
+				});
+			} else {
+				Swal.fire({
+					title: 'the specified email accounts do not match',
+					icon: 'error',
+				});
+				return;
 			}
-		});
+		} else {
+			Swal.fire({
+				title: 'Please fill out all of the form',
+				icon: 'error',
+			});
+			return;
+		}
 	};
 
 	if (items.length === 0) {
@@ -68,16 +106,14 @@ const Cart = () => {
 			<div className="cart">
 				<div className="order">
 					<Badge bg="dark">
-						<h1>
-							<h2>
-								<i className="bx bxs-cart-alt icart"></i> Your cart is empty
-							</h2>
-							<Link to="/">
-								<Button variant="light">
-									Go to shop <i class="bx bx-run"></i>
-								</Button>
-							</Link>
-						</h1>
+						<h2>
+							<i className="bx bxs-cart-alt icart"></i> Your cart is empty
+						</h2>
+						<Link to="/">
+							<Button variant="light">
+								Go to shop <i className="bx bx-run"></i>
+							</Button>
+						</Link>
 					</Badge>
 				</div>
 			</div>
